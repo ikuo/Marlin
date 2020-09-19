@@ -424,7 +424,7 @@
 #define TEMP_SENSOR_5 0
 #define TEMP_SENSOR_6 0
 #define TEMP_SENSOR_7 0
-#define TEMP_SENSOR_BED 0
+#define TEMP_SENSOR_BED 1
 #define TEMP_SENSOR_PROBE 0
 #define TEMP_SENSOR_CHAMBER 0
 
@@ -468,7 +468,7 @@
 #define HEATER_5_MAXTEMP 275
 #define HEATER_6_MAXTEMP 275
 #define HEATER_7_MAXTEMP 275
-#define BED_MAXTEMP      150
+#define BED_MAXTEMP      120
 
 //===========================================================================
 //============================= PID Settings ================================
@@ -489,10 +489,15 @@
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
+  // Ender 3 Pro
+  #define DEFAULT_Kp 28.72
+  #define DEFAULT_Ki 2.62
+  #define DEFAULT_Kd 78.81
+
   // Ultimaker
-  #define DEFAULT_Kp 22.2
-  #define DEFAULT_Ki 1.08
-  #define DEFAULT_Kd 114
+  //#define DEFAULT_Kp 22.2
+  //#define DEFAULT_Ki 1.08
+  //#define DEFAULT_Kd 114
 
   // MakerGear
   //#define DEFAULT_Kp 7.0
@@ -572,14 +577,14 @@
  * *** IT IS HIGHLY RECOMMENDED TO LEAVE THIS OPTION ENABLED! ***
  */
 #define PREVENT_COLD_EXTRUSION
-#define EXTRUDE_MINTEMP 170
+#define EXTRUDE_MINTEMP 180
 
 /**
  * Prevent a single extrusion longer than EXTRUDE_MAXLENGTH.
  * Note: For Bowden Extruders make this large enough to allow load/unload.
  */
 #define PREVENT_LENGTHY_EXTRUDE
-#define EXTRUDE_MAXLENGTH 200
+#define EXTRUDE_MAXLENGTH 1000
 
 //===========================================================================
 //======================== Thermal Runaway Protection =======================
@@ -794,7 +799,7 @@
  * When changing speed and direction, if the difference is less than the
  * value set here, it may happen instantaneously.
  */
-//#define CLASSIC_JERK
+#define CLASSIC_JERK
 #if ENABLED(CLASSIC_JERK)
   #define DEFAULT_XJERK 10.0
   #define DEFAULT_YJERK 10.0
@@ -868,7 +873,7 @@
  *      - normally-open switches to 5V and D32.
  *
  */
-//#define Z_MIN_PROBE_PIN 19 // Pin 32 is the RAMPS default
+//#define Z_MIN_PROBE_PIN 32 // Pin 32 is the RAMPS default
 
 /**
  * Probe Type
@@ -1478,7 +1483,7 @@
  *   M501 - Read settings from EEPROM. (i.e., Throw away unsaved changes)
  *   M502 - Revert settings to "factory" defaults. (Follow with M500 to init the EEPROM.)
  */
-#define EEPROM_SETTINGS     // Persistent storage with M500 and M501
+#define EEPROM_SETTINGS       // Persistent storage with M500 and M501
 //#define DISABLE_M503        // Saves ~2700 bytes of PROGMEM. Disable for release!
 #define EEPROM_CHITCHAT       // Give feedback on EEPROM commands. Disable to save PROGMEM.
 #define EEPROM_BOOT_SILENT    // Keep M503 quiet and only give errors during first load
@@ -1510,14 +1515,14 @@
 
 // Preheat Constants
 #define PREHEAT_1_LABEL       "PLA"
-#define PREHEAT_1_TEMP_HOTEND 180
-#define PREHEAT_1_TEMP_BED     70
-#define PREHEAT_1_FAN_SPEED     0 // Value from 0 to 255
+#define PREHEAT_1_TEMP_HOTEND 185
+#define PREHEAT_1_TEMP_BED     45
+#define PREHEAT_1_FAN_SPEED   255 // Value from 0 to 255
 
 #define PREHEAT_2_LABEL       "ABS"
 #define PREHEAT_2_TEMP_HOTEND 240
-#define PREHEAT_2_TEMP_BED    110
-#define PREHEAT_2_FAN_SPEED     0 // Value from 0 to 255
+#define PREHEAT_2_TEMP_BED     70
+#define PREHEAT_2_FAN_SPEED   255 // Value from 0 to 255
 
 /**
  * Nozzle Park
