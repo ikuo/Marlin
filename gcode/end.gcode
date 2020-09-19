@@ -1,3 +1,4 @@
+M106 ; Turn on Fan in case turned off by main G-code
 G4 ; Wait
 M220 S100 ; Reset Speed factor override percentage to default (100%)
 M221 S100 ; Reset Extrude factor override percentage to default (100%)
@@ -11,6 +12,5 @@ M140 S0 ; Turn off Heat Bed
 
 M84 ; Disable stepper motors
 
-M109 S45 ; Wait for Extruder to cool down
-M106 S0 ; Turn off Cooling Fan
+M109 R50 ; Wait for Extruder to cool down
 M107 ; Turn off Fan
