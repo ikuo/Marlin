@@ -1,8 +1,8 @@
+M501 ; Reset with params on EEPROM
 M104 S{material_print_temperature_layer_0} ; Set Extruder temperature
 M140 S{material_bed_temperature_layer_0} ; Set Heat Bed temperature
 ; Home axes
-G28 X Y
-G28 Z
+G28
 
 M420 S1 ; Load last-saved autolevel mesh
 G92 E0 ; Reset Extruder
