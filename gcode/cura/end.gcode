@@ -9,4 +9,5 @@ G1 X0 Y{machine_depth} F1000 ; Move Heat Bed to the front for easy print removal
 M104 S0 ; Turn off Extruder temperature
 M140 S0 ; Turn off Heat Bed
 M107 ; Turn off Fan
+M42 I1 P5 S0 ; Stop Controller Fan
 M84 ; Disable stepper motors

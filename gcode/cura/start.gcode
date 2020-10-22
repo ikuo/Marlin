@@ -10,6 +10,8 @@ G1 Z5.0 F3000
 M109 S{material_print_temperature_layer_0} ; Wait for Extruder temperature
 M190 S{material_bed_temperature_layer_0} ; Wait for Heat Bed temperature
 
+M42 I1 P5 S255 ; Start Controller Fan
+
 ; Approach runs
 G1 X16.0   Y42.0 Z0.3 F5000.0
 G1 X16.0  Y190.0 Z0.3 F1500.0 E15
