@@ -1,0 +1,18 @@
+[general]
+version = 4
+name = Ender-3 Pro PETG
+definition = creality_base
+
+[metadata]
+setting_version = 15
+quality_type = standard
+type = quality_changes
+
+[values]
+adhesion_type = skirt
+layer_height = 0.2
+material_bed_temperature = 65
+material_bed_temperature_layer_0 = 70
+support_enable = True
+support_type = buildplate
+
