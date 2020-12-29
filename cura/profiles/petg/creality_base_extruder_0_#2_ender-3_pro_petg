@@ -4,13 +4,14 @@ name = Ender-3 Pro PETG
 definition = creality_base
 
 [metadata]
-setting_version = 15
 position = 0
-quality_type = standard
+setting_version = 15
 type = quality_changes
 intent_category = default
+quality_type = standard
 
 [values]
+brim_width = 10
 cool_fan_enabled = False
 gradual_infill_steps = 3
 gradual_support_infill_step_height = 0.8
@@ -20,8 +21,9 @@ infill_sparse_density = 70
 initial_layer_line_width_factor = 100.0
 ironing_enabled = False
 material_print_temperature = 220
-material_print_temperature_layer_0 = 227
+material_print_temperature_layer_0 = 220
 retraction_speed = 25
+skirt_gap = 4
 speed_infill = 30.0
 speed_layer_0 = 15
 speed_travel = 50.0
@@ -31,5 +33,5 @@ support_interface_pattern = concentric
 support_line_width = 0.26
 support_pattern = gyroid
 support_z_distance = 0.1
-top_bottom_thickness = 0.6
+top_bottom_thickness = 0.8
 
